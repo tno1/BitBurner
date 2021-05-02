@@ -1,0 +1,30 @@
+export async function main(ns) {
+    let threads = 3;
+    
+    let host = 'foodnstuff';
+    
+    let growthReq = ns.getServerMaxMoney(host) * 0.85;
+    
+    let currentMoney = ns.getServerMoneyAvailable(host);
+    
+    let ServerSecurity = ns.getServerSecurityLevel(host);
+    let ServerSecurityMax = ns.getServerBaseSecurityLevel(host);
+    let ServerSecurityMin = ns.getServerMinSecurityLevel(host);
+    
+    while(true){
+        if(ServerSecurity > (ServerSecurityMin*1.25)) {
+            await ns.weaken(host,threads);
+        }else{
+            if(currentMoney < growthReq){
+                await ns.grow(host,threads);
+            }else{
+                await ns.hack(host,threads);
+            }
+        }
+        currentMoney = ns.getServerMoneyAvailable(host);
+    
+        ServerSecurity = ns.getServerSecurityLevel(host);
+    }
+    
+    ns.tprint(ServerSecurity + " - " + ServerSecurityMin + "/" + ServerSecurityMax);
+}
