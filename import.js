@@ -1,7 +1,7 @@
 let config = {
   folder: 'scripts',
   rootUrl: 'https://raw.githubusercontent.com/ChaelCodes/bitburner-scripts/main/',
-  serverPrefix: 'ChaelPwns',
+  serverPrefix: 'TnoPrefix',
 };
 /*
  * This will import all files listed in importFiles.
@@ -24,15 +24,7 @@ export async function main(ns) {
 
 async function importFiles(ns) {
   let files = [
-    'autoHack.js',
-    'autoRemoteHack.js',
-    'buyHacknet.js',
-    'dashboard.js',
     'hack.js',
-    'hax.js',
-    'purchaseServers.js',
-    'remoteHack.js',
-    'serverStatus.js',
   ];
   let filesImported = true;
   for (let file of files) {
