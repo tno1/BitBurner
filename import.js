@@ -1,6 +1,6 @@
 let config = {
   folder: 'scripts',
-  rootUrl: 'https://raw.githubusercontent.com/ChaelCodes/bitburner-scripts/main/',
+  rootUrl: 'https://raw.githubusercontent.com/tno1/bitburner/main/',
   serverPrefix: 'TnoPrefix',
 };
 /*
@@ -24,8 +24,8 @@ export async function main(ns) {
 
 async function importFiles(ns) {
   let files = [
-    'hack.js',
-	'upload',
+    'hack.ns',
+	'upload.ns',
   ];
   let filesImported = true;
   for (let file of files) {
