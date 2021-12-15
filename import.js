@@ -25,6 +25,7 @@ export async function main(ns) {
 async function importFiles(ns) {
   let files = [
     'hack.js',
+	'upload',
   ];
   let filesImported = true;
   for (let file of files) {
