@@ -35,3 +35,15 @@ async function importFiles(ns) {
   }
   return filesImported;
 }
+
+export function getFolder() {
+  return config.folder;
+}
+
+export function getServerPrefix() {
+  return config.serverPrefix;
+}
+
+export function getHackScript() {
+  return `/${getFolder()}/hack.js`;
+}
