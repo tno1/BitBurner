@@ -1,5 +1,5 @@
 let config = {
-  folder: '',
+  folder: 'scripts',
   rootUrl: 'https://raw.githubusercontent.com/tno1/bitburner/main/',
   serverPrefix: 'TnoPrefix',
 };

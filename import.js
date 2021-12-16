@@ -14,7 +14,7 @@ export async function main(ns) {
     ns.tprint(
       `A good place to start is running \`run /${config.folder}/import.js\``
     );
-	ns.run(${config.folder} + "/import.js")
+	ns.run(config.folder + "/import.js",1);
   } else {
     ns.tprint(
       'You had some issues downloading files, please reach out to the repo maintainer or check your config.'
