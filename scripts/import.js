@@ -10,11 +10,11 @@ export async function main(ns) {
   let filesImported = await importFiles(ns);
   ns.tprint('='.repeat(20));
   if (filesImported) {
-    ns.tprint(`You've installed the in the ${config.folder} directory.`);
+    ns.tprint('Hey! Thank you for downloading the BitBurner Scripts.');
+    ns.tprint(`You've installed these in the ${config.folder} directory.`);
     ns.tprint(
-      `A good place to start is running \`run /${config.folder}/import.js\``
+      `A good place to start is running \`run /${config.folder}/hack.js\``
     );
-	ns.run(${config.folder} + "/import.js")
   } else {
     ns.tprint(
       'You had some issues downloading files, please reach out to the repo maintainer or check your config.'
@@ -24,7 +24,8 @@ export async function main(ns) {
 
 async function importFiles(ns) {
   let files = [
-    'import.js',
+    'hack.ns',
+	'upload.ns',
   ];
   let filesImported = true;
   for (let file of files) {
